@@ -1,0 +1,22 @@
+[
+    {
+        "id" : "1",
+        "brand" : "bmw",
+        "icon" : "file.jpg"
+    },
+    {
+        "id" : "2",
+        "brand" : "toyota",
+        "icon" : "file2.jpg"
+    },
+    {
+        "id" : "3",
+        "brand" : "kia",
+        "icon" : "file3.jpg"
+    },
+    {
+        "id" : "4",
+        "brand" : "hyundai",
+        "icon" : "file4.jpg"
+    }
+]
