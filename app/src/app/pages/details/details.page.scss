@@ -1,0 +1,52 @@
+ion-toolbar p{
+    font-family: "rubik-medium";
+    text-align: center;
+}
+ion-row{
+    padding: 0 20px;
+}
+.detailitem{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.886);
+    --min-height:1rem;
+}
+.short{
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 3px 0;
+}
+.brand{
+    font-family: "rubik-medium";
+}
+.text{
+    font-size: 0.8rem;
+    text-align: justify;
+}
+.like{
+    text-align: end;
+}
+swiper-container {
+    --swiper-pagination-bullet-inactive-color: var(--ion-color-step-200, #cccccc);
+    --swiper-pagination-color: var(--ion-color-primary, #3880ff);
+    --swiper-pagination-progressbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.25);
+    --swiper-scrollbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.1);
+    --swiper-scrollbar-drag-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.5);
+  }
+  
+  swiper-slide {
+    
+    background-position: center;
+    background-size: cover;
+    width: 200px !important;
+    height: 300px;
+  
+    font-size: 18px;
+  
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+//   swiper-slide img {
+   
+//   }

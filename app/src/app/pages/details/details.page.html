@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<ion-header  class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+ 
+    <p>{{item.name}}</p>
+    <ion-icon name="share-social" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+
+  <swiper-container 
+    loop = "true"
+    slides-per-view="1.5"
+    
+    
+    >
+    <swiper-slide><img src="/assets/model.jpg"  class="productimg"></swiper-slide>
+    <swiper-slide><img src="/assets/model.jpg"  class="productimg"></swiper-slide>
+    <swiper-slide><img src="/assets/model.jpg"  class="productimg"></swiper-slide>
+  </swiper-container>
+  
+  <ion-grid class="ion-padding">
+    <ion-row >
+      <ion-col >
+        <app-liked class="like" [item]="item"></app-liked>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="details">
+        <ion-item class="detailitem">
+          <div class="brand" slot="start">
+            {{item.name}}
+          </div>
+          <div class="short">
+            {{item.short_disc}}
+          </div>
+          <div class="brand" slot="end">
+            ${{item.final_price}}
+          </div>
+        </ion-item>
+        <div>
+          <div>
+            <span *ngFor="let i of [0,1,2,3,4]" class="fa fa-star "></span>
+            
+          </div>
+        </div>
+        
+        <p class="text">
+          {{item.long_disc}}
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam impedit necessitatibus voluptate rerum natus ullam, nesciunt ex ratione excepturi est fugiat earum officia nulla aliquam quis veritatis reprehenderit omnis?
+        </p>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer  class="ion-no-border">
+  <ion-toolbar>
+    <app-addcart-btn [item]="item"></app-addcart-btn>
+  </ion-toolbar>
+</ion-footer>
