@@ -1,0 +1,33 @@
+
+
+<ion-content  class="ion-no-border" [fullscreen]="true">
+  <ion-header [translucent]="false">
+    <ion-toolbar>
+     <ion-back-button slot="start"></ion-back-button>
+     <ion-title> Categories </ion-title>
+     <ion-icon class="search" slot="end" name="search"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-xs="10" size-sm="8" size-md="8">
+        <ion-card class="logo">
+          <img class="logo-img" src="assets/arex-logo-white.png" alt="">
+         
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row  *ngFor="let category of categories" class="ion-justify-content-center">
+      <ion-col size-xs="10" size-sm="8" size-md="8">
+        <ion-card class="category-card" (click)="gotoSubcategory(category.id)">
+          <div class="cat-name">
+              {{category.name}}
+          </div>
+          <div class="img-div"><img class="card-img" [src]="category.img" alt="{{category.name}}"></div>
+        </ion-card>
+      </ion-col>
+    </ion-row>  
+  </ion-grid>
+  
+</ion-content>
