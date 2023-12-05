@@ -22,7 +22,7 @@
                 $$key = @trim($value);
 			}
 			$this->apikey = $_REQUEST['apikey']??'';
-			$this->api_imgurl = "https://crataa.com/asesewa/uploads/";
+			$this->api_imgurl = "http://127.0.0.1/apiV3/uploads/";
 			$this->inputs();
 		}
 

@@ -14,7 +14,7 @@ class logout extends REST{
     function Init(){
 		 $sql=$this->sql;
 		if($this->logout = true){
-			$stmt = $sql->Execute($sql->Prepare("UPDATE webmin_app_users SET USR_LOGIN_STATUS = '0',USR_LASTLOGIN_DATE = ".$sql->Param('a')." WHERE USR_CODE = ".$sql->Param('e')),array($this->currentdate,$this->userid));
+			$stmt = $sql->Execute($sql->Prepare("UPDATE app_users SET USR_LOGIN_STATUS = '0',USR_LASTLOGIN_DATE = ".$sql->Param('a')." WHERE USR_CODE = ".$sql->Param('e')),array($this->currentdate,$this->userid));
 			
 			if($stmt == true){
 				$this->response(array('msg'=>'success','data'=>'done'),200);

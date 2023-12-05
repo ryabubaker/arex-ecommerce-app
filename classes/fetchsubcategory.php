@@ -40,14 +40,15 @@ class fetchsubcategory  extends REST
         
                 if (!isset($subcategoriesBySubId[$subcategoryId])) {
                     $subcategoriesBySubId[$subcategoryId] = array(
-                        'id' => $subcategoryId,
+                        'subId' => $subcategoryId,
                         'name' => $val['SUB_CTG_NAME'],
                         'childCategories' => array(),
                     );
                 }
         
                 $subcategoriesBySubId[$subcategoryId]['childCategories'][] = array(
-                    'id' => $val['CHILD_CTG_ID'],
+                    'subId' => $subcategoryId,
+                    'childId' => $val['CHILD_CTG_ID'],
                     'name' => $val['CHILD_NAME'],
                 );
             }
